@@ -69,7 +69,7 @@ myApp.directive('irBoxes', function()	{
         scope : {
             count:"@"
         },
-        templateUrl: "/templates/directives/irBoxes.html",
+        templateUrl: "templates/directives/irBoxes.html",
         link: function(scope, element, attrs)   {
             scope.range = Array(parseInt(scope.count,10)).fill(0);
         }
