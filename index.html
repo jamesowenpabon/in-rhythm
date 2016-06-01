@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+    <head>
+        <title>InRhythm</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <style type="text/css">
+            .box {
+                border:solid 1px black;
+                width:100px;
+                height:100px;
+                margin-right:10px;
+                float:left;
+            }
+        </style>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="#/">InRhythm</a>
+                </div>
+                <ul class="nav navbar-nav">
+                  <li><a href="#/">Home</a></li>
+                  <li><a href="#directive">Directive Test</a></li>
+                  <li><a href="#interpolation">Interpolation Test</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+        <ng-view></ng-view>
+        </div>
+
+    </body>
+</html>
