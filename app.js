@@ -14,14 +14,9 @@ myApp.config(['$routeProvider', function($routeProvider){
         controller: "interpolation"
     })
 
-}])
-
-
-
+}]);
 
 //CONTROLLERS
-
-
 myApp.controller('interpolation', ['$scope', function($scope)   {
 
     //Interpolation with knowledge of Object structure
@@ -40,9 +35,8 @@ myApp.controller('interpolation', ['$scope', function($scope)   {
 		console.log(string, obj);
 		for (key in obj) {
             for (subkey in obj[key]){
-                console.log(subkey)
                 propName = "{"+subkey+"}";
-                propValue = obj[key][subkey]
+                propValue = obj[key][subkey];
                 string = string.replace(propName, propValue);
             }
 		}
@@ -53,14 +47,13 @@ myApp.controller('interpolation', ['$scope', function($scope)   {
         contact : {name: "john", weather: "damn hot!"}
     }
 
-    var replaceString = "Hi my name is {name} and its {weather} outside."
+    var replaceString = "Hi my name is {name} and its {weather} outside.";
     var withString = $scope.interpWithK(replaceString, personObj);
     var withoutString = $scope.interpWithoutK(replaceString, personObj);
 
     $("#messageWithK").text(withString);
-
     $("#messageWithoutK").text(withoutString);
-}])
+}]);
 
 
 //DIRECTIVES
